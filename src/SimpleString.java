@@ -3,12 +3,10 @@
  */
 
 /**
- * @author aclink4126
+ * @author Alec Nunez<anunez@unca.edu>
  *
  */
 public class SimpleString {
-
-// This is a test
 	
 
 }
