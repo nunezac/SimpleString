@@ -1,7 +1,6 @@
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
@@ -14,24 +13,25 @@ import org.junit.Test;
  *
  */
 public class TestSimpleString {
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
+	
+	private char[] charString = {'A','l', 'e', 'c'};
+	private SimpleString exampleString;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		
+		exampleString = new SimpleString(charString);
 	}
-
+	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testCharAt() {
+		
+		int index = 0;
+		
+		assertEquals(charString[index], exampleString.charAt(index));
 	}
 
 }
