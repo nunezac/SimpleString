@@ -45,4 +45,13 @@ public class SimpleString {
 		
 		return index;
 	}
+
+	public boolean isEmpty() {
+		
+		if(charString.length > 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 }

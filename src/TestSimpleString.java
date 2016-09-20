@@ -14,8 +14,10 @@ import org.junit.Test;
  */
 public class TestSimpleString {
 	
-	private char[] charString = {'A','l', 'e', 'c', ' ', 'r', 'o', 'c', 'k', 's', '!'};
+	private char[] charArray = {'A','l', 'e', 'c', ' ', 'r', 'o', 'c', 'k', 's', '!'};
+	private char[] emptyArray = {};
 	private SimpleString exampleString;
+	private SimpleString emptyString;
 
 	/**
 	 * @throws java.lang.Exception
@@ -23,7 +25,8 @@ public class TestSimpleString {
 	@Before
 	public void setUp() throws Exception {
 		
-		exampleString = new SimpleString(charString);
+		exampleString = new SimpleString(charArray);
+		emptyString = new SimpleString(emptyArray);
 	}
 	
 	@Test
@@ -31,7 +34,7 @@ public class TestSimpleString {
 		
 		int index = 0;
 		
-		assertEquals(charString[index], exampleString.charAt(index));
+		assertEquals(charArray[index], exampleString.charAt(index));
 	}
 	
 	@Test
@@ -47,6 +50,13 @@ public class TestSimpleString {
 		assertEquals(0, exampleString.indexOf('A'));
 		assertEquals(3, exampleString.indexOf('c'));
 		assertEquals(-1, exampleString.indexOf('x'));
+	}
+	
+	@Test
+	public void testIsEmpty() {
+		
+		assertTrue(emptyString.isEmpty());
+		assertFalse(exampleString.isEmpty());
 	}
 
 }
