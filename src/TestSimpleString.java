@@ -33,5 +33,12 @@ public class TestSimpleString {
 		
 		assertEquals(charString[index], exampleString.charAt(index));
 	}
+	
+	@Test
+	public void testContains() {
+		
+		assertTrue(exampleString.contains('A'));
+		assertFalse(exampleString.contains('x'));
+	}
 
 }

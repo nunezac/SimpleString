@@ -18,4 +18,17 @@ public class SimpleString {
 		
 		return charString[index];
 	}
+
+	public boolean contains(char character) {
+		
+		boolean doesContain = false;
+		
+		for(int i = 0; i < charString.length; i++) {
+			if(this.charAt(i) == character) {
+				doesContain = true;
+			}
+		}
+		
+		return doesContain;
+	}
 }
