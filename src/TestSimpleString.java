@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 public class TestSimpleString {
 	
-	private char[] charString = {'A','l', 'e', 'c'};
+	private char[] charString = {'A','l', 'e', 'c', ' ', 'r', 'o', 'c', 'k', 's', '!'};
 	private SimpleString exampleString;
 
 	/**
@@ -39,6 +39,14 @@ public class TestSimpleString {
 		
 		assertTrue(exampleString.contains('A'));
 		assertFalse(exampleString.contains('x'));
+	}
+	
+	@Test
+	public void testIndexOf() {
+		
+		assertEquals(0, exampleString.indexOf('A'));
+		assertEquals(3, exampleString.indexOf('c'));
+		assertEquals(-1, exampleString.indexOf('x'));
 	}
 
 }

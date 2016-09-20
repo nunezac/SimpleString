@@ -31,4 +31,18 @@ public class SimpleString {
 		
 		return doesContain;
 	}
+
+	public int indexOf(char character) {
+		
+		int index = -1;
+		
+		for(int i = 0; i < charString.length; i++) {
+			if(this.charAt(i) == character) {
+				index = i;
+				break;
+			}
+		}
+		
+		return index;
+	}
 }
