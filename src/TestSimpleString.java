@@ -58,5 +58,12 @@ public class TestSimpleString {
 		assertTrue(emptyString.isEmpty());
 		assertFalse(exampleString.isEmpty());
 	}
+	
+	@Test
+	public void testLength() {
+		
+		assertEquals(11, exampleString.length());
+		assertEquals(0, emptyString.length());
+	}
 
 }

@@ -54,4 +54,9 @@ public class SimpleString {
 			return true;
 		}
 	}
+
+	public int length() {
+		
+		return charString.length;
+	}
 }
