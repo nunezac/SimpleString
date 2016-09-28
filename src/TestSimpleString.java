@@ -65,5 +65,43 @@ public class TestSimpleString {
 		assertEquals(11, exampleString.length());
 		assertEquals(0, emptyString.length());
 	}
+	
+	@Test
+	public void testConcat() {
+		
+		assertEquals(exampleString.length(), exampleString.concat(emptyString).length());
+		assertEquals(emptyString.length(), emptyString.concat(emptyString).length());
+		assertEquals(2 * exampleString.length(), exampleString.concat(exampleString).length());
+	}
+	
+	@Test
+	public void testSubstring() {
+		
+		assertEquals(1, exampleString.substring(0, 1).length());
+		assertEquals(4, exampleString.substring(0, 4).length());
+		assertEquals(0, emptyString.substring(0, 0).length());
+	}
+	
+	@Test
+	public void testEquals() {
+		
+		assertTrue(exampleString.equals(exampleString));
+		assertTrue(emptyString.equals(emptyString));
+		assertFalse(exampleString.equals(emptyString));
+		
+		assertTrue(exampleString.equals(exampleString.concat(emptyString)));
+		assertTrue(emptyString.equals(emptyString.concat(emptyString)));
+	}
+	
+	@Test
+	public void testHashCode() {
+		
+		assertNotEquals(emptyString.hashCode(), exampleString.hashCode());
+		assertEquals(emptyString.hashCode(), emptyString.hashCode());
+		assertEquals(exampleString.hashCode(), exampleString.hashCode());
+		
+		assertEquals(18, emptyString.hashCode());
+		assertEquals(-177367174, exampleString.hashCode());
+	}
 
 }
