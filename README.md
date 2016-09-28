@@ -16,4 +16,5 @@ Write a class called SimpleString that implements a subset of the Java String cl
   7. substring(int startIndex, int endIndex): returns a new SimpleString that is a copy of the portion of this SimpleString that starts at index startIndex and ends at index endIndex - 1.
   8. equals(Object o): returns true if this SimpleString is equal to o.
   9. hashCode(): returns a hash code for this SimpleString.
+  
 You are to use test-driven development to develop this class. You must use JUnit for this. You will submit your SimpleString source file and your JUnit source file or files. Zip all source files in a folder and submit in the usual way by 11:55pm on September 27, 2016.
